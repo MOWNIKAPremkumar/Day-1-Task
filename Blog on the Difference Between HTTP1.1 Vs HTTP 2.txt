@@ -1,0 +1,66 @@
+Difference between HTTP1.1 VS HTTP2
+
+HTTP INTRODUCTION:
+
+	. HTTP stands for hypertext transfer protocol, and it is the basis for almost all web applications. 
+	. More specifically, HTTP is the method computers and servers use to request and send information. 
+	. For instance, when someone navigates to servers on their laptop,
+         their web browser sends an HTTP request to the servers for the content that appears on the page.
+ 	. Then servers send HTTP responses with the text, images, and formatting that the browser displays to the user.
+	. The first usable version of HTTP was created in 1997.
+	. Because it went through several stages of development, this first version of HTTP was called HTTP1.1. 
+	. This version is still in use on the web. In 2015, a new version of HTTP called HTTP2 was created. 
+	. HTTP2 solves several problems that the creators of HTTP1.1 did not anticipate. 
+	. In particular, HTTP2 is much faster and more efficient than HTTP1.1.
+ 	. One of the ways in which HTTP2 is faster is in how it prioritizes content during the loading process.
+
+HTTP web performance:
+
+	. In the context of web performance, refers to the order in which pieces of content are loaded.
+ 	. Suppose a user visits a news website and navigates to an article. Which have to load first among these, the photo,
+             the text of the article, banner ads? Prioritization affects a webpage.
+ 	. For example, large JavaScript files may block the rest of the page. 
+	. These resources load affects content and the user can't see immediately the bottom of the page. 
+	. The most important content and the image at the top of the page load faster these because of the priority of the web performance.
+
+HTTP1.1:
+ 	. In HTTP1.1 method if we make a request to the server, it responds as a resource .html page.
+ 	. Before sending the request and the response there is a TCP connection established between client and the server. 
+	. Again make a request to the server for image img.jpg and the server gives a response as an image img.jpg.  
+	. We have to add a keep-alive header after the first request. HTTP1.1 loads resources one after the other, 
+	. so one resource cannot be loaded, it blocks all the other resources behind it.  
+	. So there will be a several requests & responses are merged in a single connection.  
+	. These are the drawbacks that lead to the creation of HTTP2. 
+	. The first problem is HTTP1.1 transfer all the requests & responses in the plain text message form. 
+	. The second one is head of line blocking in which TCP connection is blocked all other requests until the response does not receive.
+ 	. All the information related to the header file is repeated in every request.
+
+HTTP2:
+ 	. HTTP2 was developed over the SPDY protocol. 
+	. HTTP2 is able to use a single TCP connection to send multiple streams of data at once so that one resource doesn’t 
+          blocks any other resource. 
+	. HTTP2 does this by splitting data into binary-code format instead of textual format.
+ 	. It also uses HPACK which is used to split data from header. 
+	. It compresses the header and sends all the other files like CSS & JS without the request of the client using the PUSH frame.
+
+The difference between HTTP1.1 Vs HTTP2
+
+HTTP1:	  			
+	. It works on the textual format.   
+	. There is head of line blocking that blocks all the requests behind it until it get all resources.
+	. It uses requests resource In lining for use getting multiple pages
+	. It compresses data by itself.
+
+HTTP2:
+	. It works on the binary protocol.
+	. It allows multiplexing so one TCP connection is required for multiple requests.
+	. It uses PUSH frame by server that collects all multiple pages 
+	. It uses HPACK for data compression.
+
+Conclusion:
+	. HTTP is used in client-server communication. 
+	. By using HTTP user sends the request to the server & the server sends the response to the user.  
+	. The difference between them is the loading of the page faster and 
+           prioritizing web performance in an order and also giving response in the intermission request too without latency.  
+	. This was the work done by the Http1.1 and HTTP2.
+

@@ -1,0 +1,32 @@
+OBJECT AND ITS REPRESENTATION  IN JAVASCRIPT
+
+JAVASCRIPT:
+	. JavaScript can be used for Client-side developments and Server-side developments. 
+      . JavaScript is both imperative and declarative type of language. 
+      . JavaScript contains objects, like Array, Date, Math and a set of language elements like operators, control structures, and statements. 
+
+OBJECTS in JavaScript:
+      . An object is a collection of properties and a property is called as a name or key and a value. 
+      . A property value can be a function and it is known as a method of that object. Methods are typically defined on the prototype.  
+      . Objects in JavaScript are the most important data type to form the JavaScript. 
+      . These objects are different from JavaScript’s primitive data types (Number, String, Boolean, null, undefined and symbol). 
+      . Objects contain primitive data-types as well as reference data-types. An object is a reference data type. 
+      . Variables are assigned as a reference value. That reference value points to the location in memory where the object is stored. 
+      . The variables don’t actually store the value.
+
+Objects and Its properties:
+      . The properties of an object define the characteristics of the object. 
+      . The property of an object can be explained as a variable that is attached to the object.  
+      . The properties of an object can be access with a dot-notation.  
+      . JavaScript variables, both the object name and property name are case sensitive. 
+      . Properties of JavaScript objects can only be accessed with a bracket notation. 
+      . Objects are sometimes called Associative arrays, since each property is associated with a string value.  
+      . A data property has four attributes [[Configurable]], [[Enumerable]], [[Writable]] and [[Value]].
+
+Conclusion:
+      . A JavaScript object is a collection of unordered properties. Properties can usually be changed, added, and deleted.
+      . But some properties can read only. 
+      . Some common solutions to JavaScript objects are Displaying the Object Properties by name,
+      . Displaying the Object Properties in a Loop, Displaying the Object using Object.values() and
+      . Displaying the Object using JSON.stringify().
+
